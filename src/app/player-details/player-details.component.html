@@ -1,0 +1,22 @@
+<div class="container w-20" style="text-align:center">
+  <form>
+    <h2>Player Name</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        #InputName
+        class="form-control"
+        placeholder="Enter Your Name"
+      />
+    </div>
+
+    <button
+      type="button"
+      class="btn btn-primary btn-lg btn-block"
+      (click)="startGame(InputName.value)"
+      [routerLink]="['/Games']"
+    >
+      Play
+    </button>
+  </form>
+</div>
