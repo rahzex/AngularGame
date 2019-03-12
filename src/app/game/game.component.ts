@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { PlayerService } from "../player.service";
 import { player } from "../player";
 import { HttpClient } from "@angular/common/http";
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: "app-game",
@@ -65,7 +66,7 @@ export class GameComponent implements OnInit {
 
   colorChangeOnClick(checkColor: boolean) {
     if (checkColor) this.score += 10;
-    this.colorChange;
+    else this.score -= 5;
     //Speed Change
     if (this.score > 50 && this.score < 100) {
       clearInterval(this.interval);
@@ -80,7 +81,8 @@ export class GameComponent implements OnInit {
       this.timeSpeed = 300;
       this.startTimer();
     }
-    console.log("Time Speed", this.timeSpeed);
+    //console.log("Time Speed", this.timeSpeed);
+    this.colorChange;
   }
 
   postData() {
@@ -90,7 +92,7 @@ export class GameComponent implements OnInit {
     };
     this.Name.name = playerDetails;
     return this.http
-      .post("http://localhost:3004/posts", playerDetails)
+      .post(environment.serverUrl, playerDetails)
       .subscribe((data: any) => {
         console.log(data);
         this.router.navigate(["Scores"]);

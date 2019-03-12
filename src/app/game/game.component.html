@@ -1,21 +1,24 @@
-<!-- <h1>
-  game works!
-</h1>
-
-<p>Time Left{{ timeLeft }} Seconds Left....</p> -->
-<div class="container-fluid" style="background-color: #404040">
+<div class="container h-75" style="background-color: #404040">
   <div class="h2 text-center text-light">Time Left:{{ timeLeft }}</div>
   <div class="h2 text-center text-light">Score:{{ score }}</div>
 
-  <div class="row">
-    <div class="col-12 d-flex justify-content-center">
-      <app-c1 [color]="c1" (click)="colorChangeOnClick(c1)"></app-c1>
-      <app-c2 [color]="c2" (click)="colorChangeOnClick(c2)"></app-c2>
+  <div class="container" style="height:70%">
+    <div class="row h-50 my-1">
+      <div class="col-sm-6 w-50">
+        <app-c1 [color]="c1" (click)="colorChangeOnClick(c1)"></app-c1>
+      </div>
+      <div class="col-sm-6 w-50">
+        <app-c2 [color]="c2" (click)="colorChangeOnClick(c2)"></app-c2>
+      </div>
     </div>
 
-    <div class="col-12 d-flex justify-content-center">
-      <app-c3 [color]="c3" (click)="colorChangeOnClick(c3)"></app-c3>
-      <app-c4 [color]="c4" (click)="colorChangeOnClick(c4)"></app-c4>
+    <div class="row h-50 my-1">
+      <div class="col-sm-6 w-50">
+        <app-c3 [color]="c3" (click)="colorChangeOnClick(c3)"></app-c3>
+      </div>
+      <div class="col-sm-6 w-50">
+        <app-c4 [color]="c4" (click)="colorChangeOnClick(c4)"></app-c4>
+      </div>
     </div>
   </div>
 </div>

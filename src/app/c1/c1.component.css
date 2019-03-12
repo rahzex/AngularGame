@@ -1,7 +1,4 @@
 .box {
-  height: 300px;
-  width: 300px;
-  margin: 20px;
   background-color: bisque;
   border: 2px solid black;
 }
